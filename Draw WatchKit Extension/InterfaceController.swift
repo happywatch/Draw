@@ -54,8 +54,8 @@ class InterfaceController: WKInterfaceController {
     let mid2 = midPoint(b, a)
     let mid1 = midPoint(c, b)
     
-    UIGraphicsBeginImageContextWithOptions(rect.size, false, 0)
-    savedImage?.draw(in: rect)
+    UIGraphicsBeginImageContextWithOptions(rect.size, true, 0) // opaque for performance
+    savedImage?.draw(in: rect) // paste the previous rendering
     let linePath = UIBezierPath()
     linePath.move(to: mid2)
     linePath.addQuadCurve(to: mid1, controlPoint: b)
