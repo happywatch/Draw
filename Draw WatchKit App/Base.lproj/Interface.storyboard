@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="11185.3" systemVersion="15G31" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11151.4"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBWatchKitPlugin" version="11074"/>
+    </dependencies>
+    <scenes>
+        <!--Interface Controller-->
+        <scene sceneID="aou-V4-d1y">
+            <objects>
+                <controller id="AgC-eL-Hgc" customClass="InterfaceController" customModule="Draw_WatchKit_App" customModuleProvider="target">
+                    <items>
+                        <group width="1" height="1" alignment="left" id="VdT-Fe-r9k">
+                            <items>
+                                <label alignment="center" verticalAlignment="center" text="Draw here" id="v8l-sq-lPL"/>
+                            </items>
+                            <gestureRecognizers>
+                                <panGestureRecognizer id="yUz-al-8ml">
+                                    <connections>
+                                        <action selector="panRecognized:" destination="AgC-eL-Hgc" id="eyo-Rx-y4A"/>
+                                    </connections>
+                                </panGestureRecognizer>
+                            </gestureRecognizers>
+                        </group>
+                    </items>
+                    <menu key="menu" id="8fh-ZN-FyO">
+                        <items>
+                            <menuItem title="Reset canvas" icon="trash" id="Eic-QZ-Vvh">
+                                <connections>
+                                    <action selector="resetButtonPressed" destination="AgC-eL-Hgc" id="KQq-a8-y6d"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                    <connections>
+                        <outlet property="canvasGroup" destination="VdT-Fe-r9k" id="ugS-EK-vaN"/>
+                        <outlet property="instructionLabel" destination="v8l-sq-lPL" id="Wtz-hY-qHF"/>
+                    </connections>
+                </controller>
+            </objects>
+        </scene>
+    </scenes>
+</document>
